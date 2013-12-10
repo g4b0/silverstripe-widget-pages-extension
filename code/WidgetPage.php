@@ -27,7 +27,7 @@ class WidgetPage extends DataExtension {
 		 * Inherith
 		 */
 		$inherit = new CheckboxField('InheritWidgets', 'Inherit Widgets from Parents');
-		$fields->addFieldToTab("Root.Main", $inherit, "Content");
+		$fields->addFieldToTab("Root.Widgets", $inherit);
 		
 		if ($this->owner->InheritWidgets == 0) {
 		
@@ -53,7 +53,7 @@ class WidgetPage extends DataExtension {
 			$config->getComponentByType('GridFieldAddExistingAutocompleter')->setSearchFields(array('WidgetName'))->setResultsFormat('$WidgetName');
 
 			$gridField = GridField::create('Widgets', 'Widgets', $this->owner->Widgets())->setConfig($config);
-			$fields->addFieldToTab("Root.Main", $gridField, "Content");
+			$fields->addFieldToTab("Root.Widgets", $gridField);
 		}
 
 		$fields->removeByName("Content");
