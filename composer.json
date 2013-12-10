@@ -1,0 +1,17 @@
+{
+    "name": "zirak/widget-pages-extension",
+    "description": "Freely inspired to burnbright/silverstripe-widgetpages, add a Widget's Gridfield to the extended pages",
+    "type": "silverstripe-module",
+    "keywords": ["silverstripe", "widgets"],
+    "license": "GPL-2",
+    "authors": [{
+        "name": "Gabriele Brosulo - Zirak",
+        "email": "gabriele.brosulo@zirak.it"
+    }],
+    "require": {
+        "silverstripe/framework": "3.1.*",
+        "silverstripe/cms": "3.1.*",
+        "silverstripe/widgets": "dev-master",
+        "ajshort/silverstripe-gridfieldextensions" : "dev-master"
+    }
+}
