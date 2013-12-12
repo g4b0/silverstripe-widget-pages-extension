@@ -4,3 +4,6 @@ Name: zk-widget-pages
 Widget:
   extensions:
     - WidgetPageWidget
+WidgetArea:
+  extensions:
+    - WidgetPageWidgetArea

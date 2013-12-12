@@ -9,7 +9,7 @@ class WidgetPageWidget extends DataExtension {
 			'WidgetName' => 'Varchar'
 	);
 	private static $belongs_many_many = array(
-			'WidgetPage' => 'WidgetPage'
+			'WidgetAreas' => 'WidgetArea'
 	);
 	private static $summary_fields = array(
 			'WidgetName'
