@@ -1,6 +1,3 @@
-silverstripe-widget-pages-extension
-===================================
-
 # Widgets Pages Extension
 
 Widgets Pages Extension is an enhancement for the actual widget module (http://addons.silverstripe.org/add-ons/silverstripe/widgets).
