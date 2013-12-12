@@ -12,7 +12,12 @@ class WidgetPageWidget extends DataExtension {
 			'WidgetAreas' => 'WidgetArea'
 	);
 	private static $summary_fields = array(
+			'WidgetType',
 			'WidgetName'
+	);
+	private static $field_labels = array(
+			'WidgetType' => 'Widget Type',
+			'WidgetName' => 'Widget Name'
 	);
 
 	public function updateCMSFields(\FieldList $fields) {
@@ -20,6 +25,10 @@ class WidgetPageWidget extends DataExtension {
 
 		$field = new TextField('WidgetName', 'Widget Name');
 		$fields->add($field);
+	}
+	
+	public function getWidgetType() {
+		return $this->owner->cmsTitle();
 	}
 
 }

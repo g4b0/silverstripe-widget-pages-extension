@@ -52,7 +52,6 @@ class WidgetPage extends DataExtension {
 
 					// It's not possible to add existing through GridFieldAddExistingSearchButton since
 					// it display by default $Title in its template and we want to search by $WidgetName
-					$config->getComponentByType('GridFieldAddExistingAutocompleter')->setSearchList(DataObject::get('Widget'));
 					$config->getComponentByType('GridFieldAddExistingAutocompleter')->setSearchFields(array('WidgetName'))->setResultsFormat('$WidgetName');
 
 					// WidgetArea's Widget GridField
