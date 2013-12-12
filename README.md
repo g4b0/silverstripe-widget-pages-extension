@@ -4,7 +4,7 @@ silverstripe-widget-pages-extension
 # Widgets Pages Extension
 
 Widgets Pages Extension is an enhancement for the actual widget module (http://addons.silverstripe.org/add-ons/silverstripe/widgets).
-Freely inspired to burnbright/silverstripe-widgetpages, add a Widget's Gridfield to the extended pages.
+Freely inspired to burnbright/silverstripe-widgetpages, it adds Widget's Gridfields to the extended pages.
 
 ## Introduction
 
