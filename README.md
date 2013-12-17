@@ -108,12 +108,12 @@ $WidgetArea(CenterWidgetArea) and $WidgetArea(FooterBar).
 
 See widget module docs (http://addons.silverstripe.org/add-ons/silverstripe/widgets).
 
-### Adding widgets to DataObjects
+## Adding widgets to DataObjects
 
 A DataObject can be renderd as a page, it just need a Route and a Controller. With Widgets Pages Extension also 
 DataObjects can have their Widgets. A sample is following:
 
-## The DataObject
+### The DataObject
 
 **mysite/code/DoSurfboard.php**
 
@@ -134,7 +134,7 @@ DataObjects can have their Widgets. A sample is following:
 
 	}
 
-## Adding Widgets Pages Extension to DataObject
+### Adding Widgets Pages Extension to DataObject
 
 **mysite/code/_config/extensions.yml**
 
@@ -146,7 +146,7 @@ DataObjects can have their Widgets. A sample is following:
 		extensions:
 			- WidgetDataObject
 
-## The route
+### The route
 
 **mysite/code/_config/routes.yml**
 
@@ -159,7 +159,7 @@ DataObjects can have their Widgets. A sample is following:
 			rules:
 					'surfboard//$ID!': 'ShowSurfboard'
 
-## The Controller
+### The Controller
 
 **mysite/code/Controllers/ShowSurfboard.php**
 
@@ -191,7 +191,7 @@ DataObjects can have their Widgets. A sample is following:
 		}
 	}
 
-## The Template
+### The Template
 
 **themes/theme-name/templates/ShowSurfboard.ss**
 
