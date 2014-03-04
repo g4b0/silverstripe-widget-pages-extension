@@ -34,7 +34,7 @@ class WidgetDataObject extends DataExtension {
 				$config->getComponentByType('GridFieldAddExistingAutocompleter')->setSearchFields(array('WidgetName'))->setResultsFormat('$WidgetName');
 
 				// WidgetArea's Widget GridField
-				$gridField = GridField::create($name, $name, $this->owner->$name()->SortedWidgets())->setConfig($config);
+				$gridField = GridField::create($name, $name, $this->owner->$name()->SortedWidgets(false))->setConfig($config);
 				$fields->addFieldToTab("Root.$name", $gridField);
 			}
 		}

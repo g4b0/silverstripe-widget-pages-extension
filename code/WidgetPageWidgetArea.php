@@ -14,8 +14,12 @@ class WidgetPageWidgetArea extends DataExtension {
 			)
 	);
 
-	public function SortedWidgets() {
-		return $this->owner->ManyWidgets()->sort('WidgetAreaSort');
+	public function SortedWidgets($filtered=true) {
+		$retVal = $this->owner->ManyWidgets()->sort('WidgetAreaSort');
+		if ($filtered) {
+			$retVal = $retVal->filter(array('Disabled' => 0));
+		}
+		return $retVal;
 	}
 	
 	public function SortedWidgetsOld() {
@@ -26,7 +30,7 @@ class WidgetPageWidgetArea extends DataExtension {
 				return null;
 			}
 			else {
-				return $this->owner->getParent()->SortedWidgets();
+				return $this->owner->getParent()->SortedWidgets(false);
 			}
 		}
 	}
