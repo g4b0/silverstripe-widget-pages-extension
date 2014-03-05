@@ -16,7 +16,7 @@ class WidgetPageWidgetArea extends DataExtension {
 
 	public function SortedWidgets($filtered=true) {
 		$retVal = $this->owner->ManyWidgets()->sort('WidgetAreaSort');
-		if ($filtered) {
+		if ($filtered && $retVal->count() > 0) {
 			$retVal = $retVal->filter(array('Disabled' => 0));
 		}
 		return $retVal;
