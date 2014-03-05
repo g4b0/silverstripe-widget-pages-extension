@@ -206,3 +206,5 @@ DataObjects can have their Widgets. A sample is following:
 	</div>
 	<% end_with %>
 
+## TODO
+Move $InheritSideBar in pages, in order to have the abilty to inherit only some widget area 
