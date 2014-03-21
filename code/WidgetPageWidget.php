@@ -6,7 +6,8 @@
 class WidgetPageWidget extends DataExtension {
 
 	private static $db = array(
-			'WidgetName' => 'Varchar',
+			'WidgetName' => 'Varchar(255)', // internal name
+			'WidgetLabel' => 'Varchar(255)', // front end lablel
 			'Disabled' => 'Boolean'
 	);
 	private static $belongs_many_many = array(
@@ -15,6 +16,7 @@ class WidgetPageWidget extends DataExtension {
 	private static $summary_fields = array(
 			'WidgetType',
 			'WidgetName',
+			'WidgetLabel',
 			'Disabled'
 	);
 	private static $field_labels = array(
@@ -25,9 +27,12 @@ class WidgetPageWidget extends DataExtension {
 	public function updateCMSFields(\FieldList $fields) {
 		parent::updateCMSFields($fields);
 
-		$field = new TextField('WidgetName', 'Widget Name');
+		$field = new TextField('WidgetLabel', 'Widget Label');
 		$fields->add($field);
 		
+		$field = new TextField('WidgetName', 'Widget Name');
+		$fields->add($field);
+				
 		$field = new CheckboxField('Disabled', 'Disabled');
 		$fields->add($field);
 	}
