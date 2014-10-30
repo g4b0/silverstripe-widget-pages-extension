@@ -207,4 +207,9 @@ DataObjects can have their Widgets. A sample is following:
 	<% end_with %>
 
 ## TODO
-Move $InheritSideBar in pages, in order to have the abilty to inherit only some widget area 
+* Move $InheritSideBar in pages, in order to have the abilty to inherit only some widget area 
+* Fix the error listed below in ISSUE section, maybe with a task that re-publish every published page
+
+## ISSUE
+After installing this module you need to re-publish existing pages where you want to use widgets, because of UnsavedRationList. If you don't re-publish the pages
+you will get the following error: Error at framework/model/UnsavedRelationList.php line 307: Uncaught LogicException: byID can't be called on an UnsavedRelationList.
