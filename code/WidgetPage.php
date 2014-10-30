@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Widget Page extension
+ * Extension for Page that permit them to have an arbitrary number of WidgetAreas
  */
 class WidgetPage extends WidgetDataObject {
 

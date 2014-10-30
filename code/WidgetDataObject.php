@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Extension for DataObjects that permit them to have an arbitrary number of WidgetAreas
+ */
 class WidgetDataObject extends DataExtension {
 
 	private static $has_one = array();

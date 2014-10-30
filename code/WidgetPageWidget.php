@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Widget extension
+ * Extension for widgets/Widget
  */
 class WidgetPageWidget extends DataExtension {
 
