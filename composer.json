@@ -11,7 +11,7 @@
     "require": {
         "silverstripe/framework": "3.1.*",
         "silverstripe/cms": "3.1.*",
-        "silverstripe/widgets": "dev-master",
+        "silverstripe/widgets": "0.2.0",
         "ajshort/silverstripe-gridfieldextensions" : "1.0.*"
     }
 }
