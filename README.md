@@ -68,6 +68,8 @@ The module will create the WidgetAreas and you're now able to start populating t
 on the page will search Widget in its Parent since it find the SiteTree root, then it stops and return a void
 WidgetArea.
 
+After installing read carefully the *ISSUE* section at the end of this document. I'm working on a solution but it's not so easy (PR are welcome).
+
 ### Installing a widget
 
 See widget module docs (http://addons.silverstripe.org/add-ons/silverstripe/widgets).
