@@ -12,7 +12,7 @@ rewrite them again. Widgets are sortable inside their WidgetArea. Also DataObjec
 
 ## Requirements
 
- * SilverStripe 3.1
+ * SilverStripe 3.1 or 3.2
 
 ### Installation
 
