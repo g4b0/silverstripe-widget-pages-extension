@@ -28,11 +28,11 @@ class WidgetPage extends WidgetDataObject {
 	/**
 	 * Creates WidgetArea DataObjects in not aleready done.
 	 */
-	public function onAfterWrite() {
+	public function onBeforeWrite() {
 
 		// Check if this page needs its own WidgetArea
 		if ($this->owner->InheritSideBar == false) {
-			parent::onAfterWrite();
+			parent::onBeforeWrite();
 		}
 	}
 	
