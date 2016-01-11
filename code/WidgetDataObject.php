@@ -46,8 +46,8 @@ class WidgetDataObject extends DataExtension {
 	/**
 	 * Creates WidgetArea DataObjects in not aleready done.
 	 */
-	public function onAfterWrite() {
-		parent::onAfterWrite();
+	public function onBeforeWrite() {
+		parent::onBeforeWrite();
 
 		$has_one = $this->owner->has_one();
 		// Loop over each WidgetArea
@@ -55,18 +55,9 @@ class WidgetDataObject extends DataExtension {
 			if ($class == 'WidgetArea') {
 				// Create the WidgetArea if it not exist
 				$dbName = $name . 'ID';
-				// Can't use $this->owner->$name()->ID since it doesn't
-				// work with DataObjects, it works just with Pages. SS bug?
-				if ($this->owner->$dbName == 0) {
-					$wa = new WidgetArea();
-					$wa->write();
-					$this->owner->$dbName = $wa->ID;
-					if ($this->owner->hasExtension('Versioned')) {
-						$this->owner->writeWithoutVersion();
-					} else {
-						$dbg = $this->owner->$name();
-						$this->owner->write();
-					}
+				$wa = $this->owner->$name();
+				if (!$wa->exists()){
+					$this->owner->$dbName = $wa->write();
 				}
 			}
 		}
