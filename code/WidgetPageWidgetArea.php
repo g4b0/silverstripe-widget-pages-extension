@@ -23,7 +23,7 @@ class WidgetPageWidgetArea extends DataExtension
         }
         return $retVal;
     }
-    
+
     public function SortedWidgetsOld()
     {
         if ($this->owner->InheritWidgets == 0) {

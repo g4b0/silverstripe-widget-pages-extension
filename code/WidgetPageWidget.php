@@ -30,14 +30,14 @@ class WidgetPageWidget extends DataExtension
 
         $fields->removeByName('Sort');
         $fields->removeByName('ParentID');
-        
+
         $field = new TextField('WidgetLabel', 'Widget Label');
         $fields->add($field);
-        
+
         $field = new TextField('WidgetName', 'Widget Name');
         $fields->add($field);
     }
-    
+
     public function getWidgetType()
     {
         return $this->owner->cmsTitle();
