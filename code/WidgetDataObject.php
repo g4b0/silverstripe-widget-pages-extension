@@ -18,7 +18,7 @@ class WidgetDataObject extends DataExtension
             if ($class == 'WidgetArea') {
 
                 /*
-                 * Widget gridfield 
+                 * Widget gridfield
                  */
                 $adder = new GridFieldAddNewMultiClass();
 

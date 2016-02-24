@@ -10,7 +10,7 @@ class WidgetPage extends WidgetDataObject {
 	);
 	private static $defaults = array(
 			'InheritSideBar' => true
-	);	
+	);
 
 	public function updateCMSFields(\FieldList $fields) {
 
@@ -35,11 +35,11 @@ class WidgetPage extends WidgetDataObject {
 			parent::onBeforeWrite();
 		}
 	}
-	
-	
+
+
 	public function WidgetArea($name='') {
 		$retVal = null;
-		
+
 		// Check if this page needs its own WidgetArea
 		if ($this->owner->InheritSideBar == true) {
 			// Inherit the WidgetArea from its Parent
@@ -49,7 +49,7 @@ class WidgetPage extends WidgetDataObject {
 		} else {
 			$retVal = parent::WidgetArea($name);
 		}
-		
+
 		return $retVal;
 	}
 
