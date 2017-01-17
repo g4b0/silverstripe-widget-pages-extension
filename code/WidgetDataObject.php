@@ -29,7 +29,7 @@ class WidgetDataObject extends DataExtension
                     $adder->setClasses($allowed);
                 }
 
-                $config = GridFieldConfig_RelationEditor::create()
+                $config = GridFieldConfig_RelationEditor::create(Config::inst()->get('WidgetDataObject', 'num_per_row'))
                                 ->removeComponentsByType("GridFieldAddNewButton")
                                 ->addComponent($adder)
                                 ->addComponent(new GridFieldOrderableRows('WidgetAreaSort'));
