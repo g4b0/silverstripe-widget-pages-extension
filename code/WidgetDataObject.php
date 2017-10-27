@@ -31,8 +31,12 @@ class WidgetDataObject extends DataExtension
 
                 $config = GridFieldConfig_RelationEditor::create(Config::inst()->get('WidgetDataObject', 'num_per_row'))
                                 ->removeComponentsByType("GridFieldAddNewButton")
-                                ->addComponent($adder)
-                                ->addComponent(new GridFieldOrderableRows('WidgetAreaSort'));
+                                ->addComponent($adder);
+
+		// If dataobject is not yet created, there's no WidgetAreaSort field to check
+                if ($this->owner->ID > 0) {
+                    $config->addComponent(new GridFieldOrderableRows('WidgetAreaSort'));
+                }
 
                 // It's not possible to add existing through GridFieldAddExistingSearchButton since
                 // it display by default $Title in its template and we want to search by $WidgetName
